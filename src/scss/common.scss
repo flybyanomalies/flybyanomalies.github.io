@@ -196,9 +196,10 @@ body {
   }
 
 }
+  .sp {
+    display: none;
 
 @media (max-width: 768px) {
-  .right {
-    margin-left: 0;
+      display: block;
   }
 }
