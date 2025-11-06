@@ -1,0 +1,26 @@
+@use '../utils/all' as *;
+@use "sass:color" as *;
+
+article .block,
+footer .block {
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0 auto;
+
+  flex-grow: 1;
+  padding: 2em;
+
+  border-radius: 1em;
+  background:$beige;
+  color: $black;
+  @include mq(max, air) {
+    padding: 1em;
+  }
+  p+p {
+    margin-top: 1em;
+  }
+}
+
+article .beige .block{
+  background:white;
+}

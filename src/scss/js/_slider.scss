@@ -1,0 +1,50 @@
+@charset 'UTF-8';
+/* -----------------------
+ Slider
+ ----------------------- */
+/* slider_box */
+.slider_box {
+    width: 732px;
+    margin: 0 auto;
+
+	.slick-slide {
+	    background: #ddd;
+
+		.slide_block {
+		    height: 332px;
+		    padding: mgn(3);
+		    box-sizing: border-box;
+		}
+	}
+
+	/* arrows */
+	.slick-prev{
+	    left: -25px;
+	    z-index: 10;
+
+	    &:before{
+		    content: '';
+		    display: block;
+		    width: 40px;
+		    height: 40px;
+		    background: url(../img/ico_arrow_left.png) no-repeat center center #666;
+		    background-size: 10px 17px;
+		    border-radius: r(4);
+		}
+	}
+
+	.slick-next{
+	    right: -25px;
+	    z-index: 10;
+
+		&:before{
+		    content: '';
+		    display: block;
+		    width: 40px;
+		    height: 40px;
+		    background: url(../img/ico_arrow_right.png) no-repeat center center #666;
+		    background-size: 10px 17px;
+		    border-radius: r(4);
+		}
+	}
+}

@@ -1,0 +1,23 @@
+block vars
+include _mixin.pug
+
+doctype html
+html(lang="ja")
+  head(prefix='og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#')
+    include _head.pug
+
+  = '\n'
+  body(class=key)
+    .layout
+      block contents
+      = '\n'
+
+
+
+
+
+    = '\n'
+    script(src=path+"assets/js/jquery/jquery-2.2.4.min.js")
+    script(src=path+"assets/js/common.js")
+
+    block footer

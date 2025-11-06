@@ -1,0 +1,65 @@
+@use '../utils/all' as *;
+@use "sass:color" as *;
+
+.breadcrumb {
+  font-size: 1.3rem;
+
+  padding-top: 1em;
+  padding-bottom: 1em;
+
+  background: $beige;
+
+  @include mq(max, md) {
+    font-size: 1.2rem;
+    padding-top: .5em;
+    padding-bottom: .5em;
+  }
+
+  .flex{
+    @include mq(max, sm) {
+      flex-wrap:wrap;
+    }
+  }
+
+
+  li {
+    position: relative;
+
+    margin-right: 10px;
+
+    a,
+    span {
+      display: inline-block;
+
+      padding-right: 10px;
+    }
+
+    a {
+      color: $yellow;
+    }
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: 0;
+
+      display: block;
+
+      width: 5px;
+      height: 5px;
+
+      content: '';
+      transform: rotate(45deg) translateY(-50%);
+
+      color: rgba($black, .5);
+      border-top: solid 1px;
+      border-right: solid 1px;
+    }
+
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}

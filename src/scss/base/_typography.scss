@@ -1,0 +1,12 @@
+@use '../utils/all' as *;
+@use "sass:color" as *;
+
+// 基本フォント設定
+body {
+    font-family:  "Open Sans", "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    font-weight: 400;
+    color: $black;
+    background-color: white;
+}

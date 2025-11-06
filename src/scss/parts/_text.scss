@@ -1,0 +1,133 @@
+@use '../utils/all' as *;
+@use "sass:color" as *;
+
+.heading01,
+.heading02 {
+  font-weight: 700;
+
+  text-align: center;
+}
+
+.heading01 {
+  font-size: 3rem;
+
+  position: relative;
+
+  margin-bottom: 2em;
+  padding-bottom: 10px;
+
+  @include mq(max, air) {
+    margin-bottom: 1em;
+  }
+
+  @include mq(max, md) {
+    font-size: 2rem;
+  }
+  @include mq(max, sm) {
+    font-size: 1.8rem;
+  }
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+
+    display: block;
+
+    width: 50px;
+    height: 3px;
+
+    content: '';
+    transform: translateX(-50%);
+
+    background: $yellow;
+  }
+
+  +.heading02 {
+
+    margin-top: -1em;
+    margin-bottom: 1em;
+
+    @include mq(max, air) {
+      margin-top: 0;
+    }
+
+   
+  }
+}
+.heading02 {
+  font-size: 2.2rem;
+  @include mq(max, md) {
+    font-size: 1.6rem;
+  }
+
+}
+
+.heading03 {
+  font-size: 1.8rem;
+  font-weight: 600;
+
+  position: relative;
+
+  padding-left: 2em;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  @include mq(max, sm) {
+    font-size: 1.6rem;
+    padding-left: 1.5em;
+  }
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    display: block;
+
+    width: 1.5em;
+    height: 2px;
+
+    content: '';
+    transform: translateY(-50%);
+
+    background: $yellow;
+    @include mq(max, sm) {
+      width: 1em;
+    }
+  }
+}
+.heading04 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1em;
+  span {
+    font-size: 90%;
+    padding-left: 1em;
+  }
+  @include mq(max, sm) {
+    font-size: 1.8rem;
+  }
+}
+
+.heading01,
+.heading02,
+.heading03,
+.heading04,
+strong,.em {
+  &.blue {
+    color:$blue;
+  }
+  &.pink {
+    color:$pink;
+  }
+  &.green {
+    color:$green;
+  }
+}
+
+.text-wrap {
+  max-width: 800px;
+  margin: 0 auto;
+
+  p+p {
+    margin-top: 1em;
+  }
+}

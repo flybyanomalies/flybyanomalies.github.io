@@ -1,0 +1,41 @@
+@use "sass:map";
+
+// 画像置換
+@mixin replace {
+  font-size: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-indent: 100%;
+  height: 0;
+}
+
+// ブレークポイントの定義
+$breakpoints: (
+  xs: 376px, // スマホ小
+  sm: 421px, // スマホ大
+  md: 769px, // タブレット
+  air: 821px, // iPad Air
+  lg: 1025px, // デスクトップ小
+  xl: 1367px // デスクトップ大
+) !default;
+
+// メディアクエリミックスイン
+@mixin mq($type, $bp1, $bp2: 0) {
+  @if ($type == min) {
+    @media screen and (min-width: #{map.get($breakpoints, $bp1)}) {
+      @content;
+    }
+  } @else if ($type == max) {
+    $width: map.get($breakpoints, $bp1);
+    $width: $width - 1px; // max-width は境界を1px減少
+    @media screen and (max-width: #{$width}) {
+      @content;
+    }
+  } @else if ($type == bw) {
+    $width: map.get($breakpoints, $bp2);
+    $width: $width - 1px; // between の場合も max-width を調整
+    @media screen and (min-width: #{map.get($breakpoints, $bp1)}) and (max-width: #{$width}) {
+      @content;
+    }
+  }
+}

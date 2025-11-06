@@ -1,0 +1,204 @@
+// ユーティリティ
+@use 'utils/all'as *;
+@use 'utils/var';
+@use 'utils/mixins';
+@use 'utils/utilities';
+
+// ベーススタイル
+@use 'base/reset';
+@use 'base/typography';
+@use 'base/base';
+
+// レイアウト
+@use 'layout/header';
+@use 'layout/footer';
+
+
+body {
+  background-color: #00ff68;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  color: #00a1ff;
+  text-decoration: underline;
+}
+
+/* ベース */
+html,
+body {
+  margin: 0;
+}
+
+/* 左：画面に固定。幅はauto（コンテンツ実幅に従う） */
+.left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: auto;
+  background: #efefef;
+  overflow: hidden;
+  padding: 0;
+  border-right: solid 1px #000;
+
+  img {
+    width: auto;
+    height: 100vh;
+  }
+
+  @media (max-width: 768px) {
+    position: static;
+    height: auto;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-bottom: solid 1px #000;
+    }
+  }
+}
+
+/* 右：左の実幅を CSS変数で受け取り margin-left に適用 */
+.right {
+  margin-left: var(--left-w, 0px);
+  min-height: 200vh;
+  box-sizing: border-box;
+  background: #efefef;
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+  }
+
+  small {
+    display: block;
+    font-size: 70%;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-weight: 700;
+  }
+
+  h1 {
+    font-size: 4rem;
+    line-height: 1.4;
+
+    @media (max-width: 768px) {
+      font-size: 3rem;
+    }
+  }
+
+  h2 {
+    margin-bottom: 5vh;
+    font-size: 2rem;
+    line-height: 1.4;
+
+    @media (max-width: 768px) {
+      font-size: 1.8rem;
+    }
+  }
+
+  dl {
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 1.6;
+
+  }
+
+  .info {
+    dl {
+      font-weight: 600;
+
+      dt {
+        width: 4em;
+      }
+
+      dd {
+        font-size: 1.8rem;
+        width: calc(100% - 4em);
+        padding-bottom: .5em;
+
+        @media (max-width: 768px) {
+          font-size: 1.5rem;
+        }
+
+        .small {
+          font-size: 1.5rem;
+          font-weight: normal;
+
+          @media (max-width: 768px) {
+            font-size: 1.2rem;
+          }
+        }
+
+      }
+    }
+  }
+
+  .block {
+    padding: 2em;
+
+    @media (max-width: 768px) {
+      padding: 2em 1em;
+    }
+  }
+
+  .block+.block {
+    border-top: solid 1px #000;
+  }
+
+  .info,
+  .name,
+  .sponsor {
+    @media (max-width: 768px) {
+      background-color: #fff;
+    }
+  }
+
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  p+h3 {
+    margin-top: 1em;
+  }
+
+  .sponsor dl {
+    dt {
+      width: 3em;
+    }
+
+    dd {
+      width: calc(100% - 3em);
+
+    }
+  }
+
+  .profile {
+    background-color: #fff;
+
+    @media (max-width: 768px) {
+      background-color: #efefef;
+    }
+    line-height: 1.8;
+  }
+
+
+  .box+.box {
+    margin-top: 2em;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .right {
+    margin-left: 0;
+  }
+}

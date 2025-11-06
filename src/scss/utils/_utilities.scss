@@ -1,0 +1,23 @@
+@use 'all'as *;
+
+body {
+  @include mq(min, air) {
+    margin: 0;
+  }
+
+  @include mq(min, md) {
+    margin: 0;
+  }
+
+  @include mq(max, air) {
+    margin: 0;
+  }
+
+  @include mq(max, md) {
+    margin: 0;
+  }
+
+  @include mq(max, sm) {
+    margin: 0;
+  }
+}

@@ -1,0 +1,50 @@
+@charset 'UTF-8';
+/* -----------------------
+ Accordion
+ ----------------------- */
+ .accordion_box {
+	.menu_list {
+	    position: relative;
+
+	    .menu_ttl {
+		    position: relative;
+		    padding: mgn(3);
+		    background: #ccc;
+		    border-bottom: 1px solid #fff;
+		    color: #333;
+		    cursor: pointer;
+
+		    &:before,
+			&:after {
+			    position: absolute;
+			    top: 0;
+			    bottom: 0;
+			    right: 0;
+			    content: "";
+			    margin: auto;
+			    vertical-align: middle;
+			}
+
+			&:before{
+			    right: 24px;
+			    width: 8px;
+			    height: 8px;
+			    border-top: 1px solid #333;
+			    border-right: 1px solid #333;
+			    -webkit-transform: rotate(135deg);
+			    transform: rotate(135deg);
+			    transition: ease-in-out 100ms;
+			}
+
+			&.open:before{
+			    -webkit-transform: rotate(-45deg);
+			    transform: rotate(-45deg);
+			}
+		}
+
+		.menu_txt {
+		    display: none;
+		    padding: mgn(3) mgn(1);
+		}
+	}
+}
