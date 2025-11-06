@@ -1,0 +1,342 @@
+@charset "UTF-8";
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+menu,
+nav,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  line-height: 1.15;
+  font-size: 62.5%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.8;
+  font-weight: 400;
+  color: #000;
+  background: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+  background-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th,
+td {
+  padding: 0;
+  text-align: left;
+}
+
+body {
+  font-family: "Open Sans", "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.8;
+  font-weight: 400;
+  color: #000;
+  background-color: white;
+}
+
+#mv img {
+  width: 100%;
+}
+
+body {
+  background-color: #00ff68;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  color: #00a1ff;
+  text-decoration: underline;
+}
+
+/* ベース */
+html,
+body {
+  margin: 0;
+}
+
+/* 左：画面に固定。幅はauto（コンテンツ実幅に従う） */
+.left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: auto;
+  background: #efefef;
+  overflow: hidden;
+  padding: 0;
+  border-right: solid 1px #000;
+}
+.left img {
+  width: auto;
+  height: 100vh;
+}
+
+/* 右：左の実幅を CSS変数で受け取り margin-left に適用 */
+.right {
+  margin-left: var(--left-w, 0px);
+  min-height: 200vh;
+  box-sizing: border-box;
+  background: #efefef;
+}
+.right small {
+  display: block;
+  font-size: 70%;
+}
+.right h1,
+.right h2,
+.right h3,
+.right h4 {
+  font-weight: 700;
+}
+.right h1 {
+  font-size: 4rem;
+  line-height: 1.4;
+}
+.right h2 {
+  margin-bottom: 5vh;
+  font-size: 2rem;
+  line-height: 1.4;
+}
+.right dl {
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 1.6;
+}
+.right .info dl {
+  font-weight: 600;
+}
+.right .info dl dt {
+  width: 4em;
+}
+.right .info dl dd {
+  font-size: 1.8rem;
+  width: calc(100% - 4em);
+  padding-bottom: 0.5em;
+}
+.right .info dl dd .small {
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+.right .block {
+  padding: 2em;
+}
+.right .block + .block {
+  border-top: solid 1px #000;
+}
+.right h3 {
+  font-size: 2rem;
+}
+.right p + h3 {
+  margin-top: 1em;
+}
+.right .sponsor dl dt {
+  width: 3em;
+}
+.right .sponsor dl dd {
+  width: calc(100% - 3em);
+}
+.right .profile {
+  background-color: #fff;
+}
+.right .profile {
+  line-height: 1.8;
+}
+.right .box + .box {
+  margin-top: 2em;
+}
+@media screen and (min-width: 821px) {
+  body {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 769px) {
+  body {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 820px) {
+  body {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 420px) {
+  body {
+    margin: 0;
+  }
+  body {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 768px) {
+  .left {
+    position: static;
+    height: auto;
+  }
+  .left img {
+    width: 100%;
+    height: auto;
+    border-bottom: solid 1px #000;
+  }
+  .right {
+    margin-left: 0;
+  }
+  .right h1 {
+    font-size: 3rem;
+  }
+  .right h2 {
+    font-size: 1.8rem;
+  }
+  .right .info dl dd {
+    font-size: 1.5rem;
+  }
+  .right .info dl dd .small {
+    font-size: 1.2rem;
+  }
+  .right .block {
+    padding: 2em 1em;
+  }
+  .right .info,
+  .right .name,
+  .right .sponsor {
+    background-color: #fff;
+  }
+  .right .profile {
+    background-color: #efefef;
+  }
+  .right {
+    margin-left: 0;
+  }
+}
+/*# sourceMappingURL=common.css.map */
