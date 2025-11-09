@@ -218,11 +218,15 @@ body {
 .right h1 {
   font-size: 4rem;
   line-height: 1.4;
+  margin-bottom: 0.5em;
 }
-.right h2 {
+.right .title {
   margin-bottom: 5vh;
-  font-size: 2rem;
+}
+.right .title p {
+  font-size: 1.6rem;
   line-height: 1.4;
+  font-weight: 700;
 }
 .right dl {
   display: flex;
@@ -244,17 +248,33 @@ body {
   font-size: 1.5rem;
   font-weight: normal;
 }
+.right .button {
+  display: block;
+  background-color: #00ff68;
+  text-align: center;
+  max-width: 12em;
+  margin-top: 0.5em;
+  padding: 0.5em 1em;
+  border-radius: 0.2em;
+  font-weight: 700;
+  text-decoration: none;
+  color: #000;
+}
 .right .block {
   padding: 2em;
 }
 .right .block + .block {
   border-top: solid 1px #000;
 }
-.right h3 {
+.right h2 {
   font-size: 2rem;
 }
-.right p + h3 {
+.right p + h2 {
   margin-top: 1em;
+}
+.right .lead {
+  font-weight: 500;
+  font-size: 1.8rem;
 }
 .right .sponsor dl dt {
   width: 3em;
@@ -265,8 +285,35 @@ body {
 .right .profile {
   background-color: #fff;
 }
+.right .profile h2 {
+  margin-bottom: 1em;
+}
 .right .profile {
   line-height: 1.8;
+}
+.right .zine {
+  background-color: #fff;
+}
+.right .zine img, .right .org img {
+  max-width: 400px;
+  display: block;
+  margin-bottom: 1em;
+}
+.right .zine a, .right .org a {
+  display: block;
+  font-weight: normal;
+}
+.right .zine h3, .right .org h3 {
+  margin-top: 1em;
+  font-size: 2rem;
+  margin-bottom: 1em;
+}
+.right .zine li, .right .org li {
+  margin-bottom: 0.5em;
+  font-weight: 700;
+}
+.right .org h3 {
+  margin-top: 0;
 }
 .right .box + .box {
   margin-top: 2em;
@@ -325,8 +372,8 @@ body {
   .right h1 {
     font-size: 3rem;
   }
-  .right h2 {
-    font-size: 1.8rem;
+  .right .title p {
+    font-size: 1.2rem;
   }
   .right .info dl dd {
     font-size: 1.5rem;

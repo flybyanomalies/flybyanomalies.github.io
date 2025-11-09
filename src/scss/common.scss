@@ -88,21 +88,26 @@ body {
   h1 {
     font-size: 4rem;
     line-height: 1.4;
+    margin-bottom: .5em;
 
     @media (max-width: 768px) {
       font-size: 3rem;
     }
   }
-
-  h2 {
+  .title {
     margin-bottom: 5vh;
-    font-size: 2rem;
+    p {
+    font-size: 1.6rem;
     line-height: 1.4;
+    font-weight: 700;
 
     @media (max-width: 768px) {
-      font-size: 1.8rem;
+      font-size: 1.2rem;
     }
   }
+  }
+
+
 
   dl {
     display: flex;
@@ -140,6 +145,18 @@ body {
       }
     }
   }
+  .button {
+    display: block;
+    background-color: #00ff68;
+    text-align: center;
+    max-width: 12em;
+    margin-top: .5em;
+    padding: .5em 1em;
+    border-radius: .2em;
+    font-weight: 700;
+    text-decoration: none;
+    color: #000;
+  }
 
   .block {
     padding: 2em;
@@ -162,12 +179,17 @@ body {
   }
 
 
-  h3 {
+  h2 {
     font-size: 2rem;
   }
 
-  p+h3 {
+  p+h2 {
     margin-top: 1em;
+  }
+
+  .lead {
+    font-weight: 500;
+    font-size: 1.8rem;
   }
 
   .sponsor dl {
@@ -183,11 +205,43 @@ body {
 
   .profile {
     background-color: #fff;
+    h2 {
+      margin-bottom: 1em;
+    }
 
     @media (max-width: 768px) {
       background-color: #efefef;
     }
     line-height: 1.8;
+  }
+  .zine {
+    background-color: #fff;
+
+  }
+  .zine,.org {
+    img {
+      max-width: 400px;
+      display: block;
+      margin-bottom: 1em;
+    }
+    a {
+      display: block;
+      font-weight: normal;
+    }
+    h3 {
+      margin-top: 1em;
+      font-size: 2rem;
+      margin-bottom: 1em;
+    }
+    li {
+      margin-bottom: .5em;
+      font-weight: 700;
+    }
+  }
+  .org {
+    h3 {
+      margin-top: 0;
+    }
   }
 
 
