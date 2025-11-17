@@ -266,6 +266,10 @@ body {
 .right .block + .block {
   border-top: solid 1px #000;
 }
+.right p.end {
+  font-weight: bold;
+  color: #00a1ff;
+}
 .right h2 {
   font-size: 2rem;
 }
