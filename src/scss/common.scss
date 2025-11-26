@@ -27,13 +27,11 @@ a {
   text-decoration: underline;
 }
 
-/* ベース */
 html,
 body {
   margin: 0;
 }
 
-/* 左：画面に固定。幅はauto（コンテンツ実幅に従う） */
 .left {
   position: fixed;
   top: 0;
@@ -62,7 +60,6 @@ body {
   }
 }
 
-/* 右：左の実幅を CSS変数で受け取り margin-left に適用 */
 .right {
   margin-left: var(--left-w, 0px);
   min-height: 200vh;
@@ -204,6 +201,18 @@ body {
     dd {
       width: calc(100% - 3em);
 
+    }
+  }
+
+  .movie {
+    h2 {
+      margin-bottom: 1em;
+    }
+    p+p {
+      margin-top: 1em;
+    }
+    .small {
+      font-size: .8em;
     }
   }
 

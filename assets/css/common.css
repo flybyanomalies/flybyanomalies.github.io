@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 html,
 body,
 div,
@@ -175,13 +173,11 @@ a {
   text-decoration: underline;
 }
 
-/* ベース */
 html,
 body {
   margin: 0;
 }
 
-/* 左：画面に固定。幅はauto（コンテンツ実幅に従う） */
 .left {
   position: fixed;
   top: 0;
@@ -198,7 +194,6 @@ body {
   height: 100vh;
 }
 
-/* 右：左の実幅を CSS変数で受け取り margin-left に適用 */
 .right {
   margin-left: var(--left-w, 0px);
   min-height: 200vh;
@@ -285,6 +280,15 @@ body {
 }
 .right .sponsor dl dd {
   width: calc(100% - 3em);
+}
+.right .movie h2 {
+  margin-bottom: 1em;
+}
+.right .movie p + p {
+  margin-top: 1em;
+}
+.right .movie .small {
+  font-size: 0.8em;
 }
 .right .profile {
   background-color: #fff;
